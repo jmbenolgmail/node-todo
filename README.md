@@ -30,7 +30,7 @@ If you want to deploy the node todo app:
 ```
 MONGO_USERNAME=<username>
 MONGO_PASSWORD=<password>
-MONGO_PORT=27017`
+MONGO_PORT=27017
 MONGO_DB=meanstacktutorials
 ```
 4. Run: `docker-compose up -d`
@@ -48,7 +48,7 @@ If you want to test the node todo app with cli tool:
 5. Usage:
 ```
 GET TODOS:   ./cli-tool.sh -g [table|txt|json]
-ADD TODO:    ./cli-tool.sh -a description`
-DELETE TODO: ./cli-tool.sh -d id`
+ADD TODO:    ./cli-tool.sh -a description
+DELETE TODO: ./cli-tool.sh -d id
 TEST APP:    ./cli-tool.sh -t
 ```
