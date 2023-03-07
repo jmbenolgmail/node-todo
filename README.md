@@ -16,7 +16,7 @@ Each branch represents a certain tutorial.
 If you want to modify the node todo app:
 
 1. Clone the repository: `git clone https://github.com/jmbenol/node-todo`
-2. Move to directory: `cd node-todo`
+2. Move to directory: `cd node-todo/docker`
 3. Edit nodejs app
 4. Build your own image: `docker build . -t <repo>/<image>:<tag>`
 
@@ -25,12 +25,14 @@ If you want to modify the node todo app:
 If you want to deploy the node todo app:
 
 1. Clone the repository: `git clone https://github.com/jmbenol/node-todo`
-2. Move to directory: `cd node-todo`
-3. Create .env file:
-`MONGO_USERNAME=<username>`
-`MONGO_PASSWORD=<password>`
-`MONGO_PORT=27017`
-`MONGO_DB=meanstacktutorials`
+2. Move to directory: `cd node-todo/docker`
+3. Create .env file: `vi .env`
+```
+MONGO_USERNAME=<username>
+MONGO_PASSWORD=<password>
+MONGO_PORT=27017`
+MONGO_DB=meanstacktutorials
+```
 4. Run: `docker-compose up -d`
 
 REQUIREMENTS: you need docker and docker-compose installed in your environment
@@ -44,7 +46,9 @@ If you want to test the node todo app with cli tool:
 3. Edit HOST and PORT variables: `vi cli-tool.sh`
 4. Execute: `./cli-tool.sh [command]`
 5. Usage:
-`GET TODOS:   ./cli-tool.sh -g [table|txt|json]`
-`ADD TODO:    ./cli-tool.sh -a description`
-`DELETE TODO: ./cli-tool.sh -d id`
-`TEST APP:    ./cli-tool.sh -t`
+```
+GET TODOS:   ./cli-tool.sh -g [table|txt|json]
+ADD TODO:    ./cli-tool.sh -a description`
+DELETE TODO: ./cli-tool.sh -d id`
+TEST APP:    ./cli-tool.sh -t
+```
