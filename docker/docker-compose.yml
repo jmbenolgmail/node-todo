@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  nodejs:
+    image: jmbenol/node-todo:v1.0.0
+    container_name: node-todo
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - MONGO_USERNAME=$MONGO_USERNAME
+      - MONGO_PASSWORD=$MONGO_PASSWORD
+      - MONGO_HOSTNAME=db
+      - MONGO_PORT=$MONGO_PORT
+      - MONGO_DB=$MONGO_DB
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  db:
+    image: mongo:4.4.6
+    container_name: db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
+    networks:
+      - app-network  
+
+networks:
+  app-network:
+    driver: bridge

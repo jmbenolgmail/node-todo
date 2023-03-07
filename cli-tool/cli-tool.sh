@@ -48,9 +48,10 @@ function delete_single_todo() {
 	curl -X DELETE -s -o /dev/null "http://$HOST:$PORT/api/todos/$1"
 }
 
-# TEST
+# Test node todo
+# Creates random numer of todos, lists todos in different formats, deletes all todos
 function test_node_todo() {
-	number=$(( $RANDOM % 10 + 1 ))
+	number=$(( $RANDOM % 91 + 10 ))
 	for ((i=1; i <= number; i++)); do
 		add_single_todo "test $i"
 	done

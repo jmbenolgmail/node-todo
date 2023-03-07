@@ -1,8 +1,5 @@
 FROM node:18.14.2-bullseye-slim
 
-ENV MONGO_HOST localhost
-ENV MONGO_PORT 27017
-
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -18,8 +15,9 @@ RUN npm install
 # Bundle app source
 COPY --chown=node:node . .
 
+# PORT 8080
 EXPOSE 8080
 
+# RUN under node user
 USER node
-ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "node", "./server.js" ]
