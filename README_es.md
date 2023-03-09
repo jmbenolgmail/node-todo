@@ -37,7 +37,17 @@ Si quieres desplegar node todo app:
 `MONGO_DB=meanstacktutorials`
 1. Despliega: `docker-compose up -d`
 
-REQUIREMENTS: you need docker and docker-compose installed in your environment
+REQUIREMENTS: Necesitarás docker y docker-compose instalado en tu entorno
+
+## Despliega node todo app con helm!
+
+Si quieres desplegar node todo app en kubernetes:
+
+1. Clona el repositorio: `git clone https://github.com/jmbenol/node-todo`
+2. Ve al directorio: `cd node-todo/helm`
+4. Despliega: `helm install <name> -n <namespace> node-todo/ --create-namespace`
+
+REQUIREMENTS: Necesitarás helm (ha sido probado con helm v3) y un cluster kubernetes
 
 ## Prueba node todo app!
 

@@ -37,6 +37,16 @@ MONGO_DB=meanstacktutorials
 
 REQUIREMENTS: you need docker and docker-compose installed in your environment
 
+## Deploy node todo app with helm!
+
+If you want to deploy the node todo app on kubernetes:
+
+1. Clone the repository: `git clone https://github.com/jmbenol/node-todo`
+2. Move to directory: `cd node-todo/helm`
+4. Run: `helm install <name> -n <namespace> node-todo/ --create-namespace`
+
+REQUIREMENTS: you need helm (it has been tested with helm v3) and a kubernetes cluster
+
 ## Test node todo app!
 
 If you want to test the node todo app with cli tool:
