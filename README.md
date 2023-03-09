@@ -52,3 +52,13 @@ ADD TODO:    ./cli-tool.sh -a description
 DELETE TODO: ./cli-tool.sh -d id
 TEST APP:    ./cli-tool.sh -t
 ```
+
+REQUIREMENTS: It has been tested in Ubuntu. You will need to install following tools
+```
+apt-get update
+apt-get install -y git
+apt-get install -y curl
+apt-get install -y jq
+apt-get install -y csvkit
+apt-get install -y vim
+```

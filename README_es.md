@@ -53,3 +53,12 @@ Si quieres probar node todo app con la herramienta cli:
 `DELETE TODO: ./cli-tool.sh -d id`
 `TEST APP:    ./cli-tool.sh -t`
 
+REQUIREMENTS: Esta herramienta ha sido probada en Ubuntu. Para usarla, necesitarás instalar los siguientes paquetes:
+```
+apt-get update
+apt-get install -y git
+apt-get install -y curl
+apt-get install -y jq
+apt-get install -y csvkit
+apt-get install -y vim
+```
